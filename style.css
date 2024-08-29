@@ -255,7 +255,7 @@ footer a {
   font-size: 26px;
   font-weight: bold;
   color: var(--red);
-  margin-top: 40px;
+  margin-top: 60px;
   margin-left: 40px;
 }
 
@@ -300,18 +300,12 @@ footer a {
   margin-left: 30px;
   margin-top: 120px;
 }
-.button button {
+.button {
   width: 600px;
   height: 94px;
-  border: 0;
-  border-bottom: 2px solid var(--blue);
-  border-right: 2px solid var(--blue);
-  border-right-style: dashed;
-  border-bottom-style: dashed;
-  border-radius: 30px;
-  margin-left: 90px;
-  margin-top: -40px;
-  background-color: rgba(247, 250, 248, 0.09);
+  margin-left: 200px;
+  margin-top: 20px;
+  background-color: rgba(247, 250, 248, 0);
   font-family: "Inria Serif", serif;
   font-size: 26px;
   color: var(--blue);
@@ -321,7 +315,19 @@ footer a {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  position: sticky;
+  position: relative;
+}
+.cta {
+  animation: cta 20s linear infinite;
+  transform: translate(-50%, -50%);
+}
+@keyframes cta {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .title-red-big {
   font-family: "Inria Serif", serif;
@@ -425,4 +431,11 @@ footer a {
   position: relative;
   top: -150px; /* Устанавливает якорь на 50px выше элемента */
   height: 0;
+}
+.first-div {
+  position: relative;
+  z-index: 1;
+}
+.third-div {
+  z-index: 1000;
 }
